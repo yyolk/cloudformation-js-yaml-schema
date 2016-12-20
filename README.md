@@ -1,2 +1,5 @@
 # cloudformation-js-yaml-schema
-Wrapper to ignore CloudFormation YAML local tags while parsing
+
+Schema to ignore CloudFormation YAML local tags while parsing
+
+For utility in templates and build wrappers
