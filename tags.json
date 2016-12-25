@@ -1,0 +1,24 @@
+{
+  "mapping": [
+    "Base64"
+  ],
+  "sequence": [
+    "And",
+    "Equals",
+    "GetAtt",
+    "If",
+    "FindInMap",
+    "Join",
+    "Not",
+    "Or",
+    "Select"
+  ],
+  "scalar": [
+    "Ref",
+    "Sub",
+    "GetAZs",
+    "GetAtt",
+    "ImportValue",
+    "Condition"
+  ]
+}
