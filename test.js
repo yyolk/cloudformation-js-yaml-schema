@@ -3,14 +3,15 @@ var path = require('path');
 var util = require('util');
 var yaml = require('js-yaml');
 var CLOUDFORMATION_SCHEMA = require('./index').CLOUDFORMATION_SCHEMA;
-fs.readFile(path.join(__dirname, 'custom.yml'), 'utf8', function (error, data) {
+fs.readFile(path.join(__dirname, 'custom2.yml'), 'utf8', function (error, data) {
   var loaded;
 
   if (!error) {
-    loaded = yaml.load(data, { schema: CLOUDFORMATION_SCHEMA });
+    loaded = yaml.load(data, { schema: CLOUDFORMATION_SCHEMA, styles: { "!Ref": { canonical: "!Ref", camelcase: "!Ref" } } });
     console.log(util.inspect(loaded, false, 20, true));
-    console.log('vpc is', loaded.Resources.WindowsSingleELBSecurityGroup.Properties.VpcId);
-    console.log(yaml.dump(loaded, {schema: CLOUDFORMATION_SCHEMA}))
+    console.log(yaml.dump(loaded, {noRefs:true, flowLevel: 4, styles: { "!Ref": { canonical: "!Ref", camelcase: "!Ref" } }, noCompatMode: false, schema: CLOUDFORMATION_SCHEMA}))
+    newloaded = yaml.load(yaml.dump(loaded, {flowLevel: 3, styles: { "!Ref": { canonical: "!Ref" } }, schema: CLOUDFORMATION_SCHEMA}), {schema: CLOUDFORMATION_SCHEMA});
+    console.log(util.inspect(newloaded, false, 20, true));
   } else {
     console.error(error.stack || error.message || String(error));
   }
