@@ -1,38 +1,33 @@
-// import yaml from 'js-yaml';
 const yaml = require('js-yaml');
+const localTags = require('./tags.json');
 
-function buildCfTags() {
-  let cloudformationMappingTags = [
-    "!Base64",
-  ];
-  let cloudformationSequenceTags = [
-    "!And",
-    "!Equals",
-    "!GetAtt",
-    "!If",
-    "!FindInMap",
-    "!Join",
-    "!Not",
-    "!Or",
-    "!Select",
-  ];
-  let cloudformationScalarTags = [
-    "!Ref",
-    "!Sub",
-    "!GetAZs",
-    "!GetAtt",
-    "!ImportValue",
-    "!Condition",
-  ];
+function Model(name) {
+  return function (data) {
+    this.class = name;
+    this.name = name;
+    this.data = data;
+  };
+}
+
+const CustomYamlType = function(name, kind) {
+  let model = new Model(name);
+  return new yaml.Type('!'+name, {
+    kind: kind,
+    instanceOf: model,
+    construct: function(data) {
+      return new model(data);
+    },
+    represent: function(ref, style) {
+      return ref.data;
+    }
+  });
+}
+
+function build() {
   let cloudformationTags = [];
-  cloudformationMappingTags.map(tag => cloudformationTags.push(new yaml.Type(tag, {kind: 'mapping'})));
-  cloudformationSequenceTags.map(tag => cloudformationTags.push(new yaml.Type(tag, {kind:'sequence'})));
-  cloudformationScalarTags.map(tag => cloudformationTags.push(new yaml.Type(tag, {kind:'scalar'})));
+  Object.keys(localTags).map((kind) => localTags[kind].map((tag) => cloudformationTags.push(CustomYamlType(tag, kind))));
   return cloudformationTags;
 }
-module.exports.tags = cloudformationTags = buildCfTags();
-// const cloudformationTags = buildCfTags();
-// export Schema = yaml.Schema.create(cloudformationTags);
-// export tags = cloudformationTags;
-//
+
+module.exports.tags = cloudformationTags = build();
 module.exports.CLOUDFORMATION_SCHEMA = yaml.Schema.create(cloudformationTags);
