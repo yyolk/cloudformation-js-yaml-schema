@@ -9,7 +9,7 @@ function Model(name) {
   };
 }
 
-const CustomYamlType = function(name, kind) {
+function CustomYamlType(name, kind) {
   let model = new Model(name);
   return new yaml.Type('!'+name, {
     kind: kind,
