@@ -1,6 +1,6 @@
 {
   "name": "cloudformation-js-yaml-schema",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Schema to ignore CloudFormation YAML local tags while parsing or dumping",
   "main": "index.js",
   "scripts": {
