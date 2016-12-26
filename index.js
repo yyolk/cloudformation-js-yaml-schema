@@ -1,7 +1,7 @@
 const yaml = require('js-yaml');
 const localTags = require('./tags.json');
 
-function build(localTags,yaml) {
+function build(localTags, yaml) {
   function Model(name) {
     return function (data) {
       this.class = name;
@@ -10,7 +10,7 @@ function build(localTags,yaml) {
     };
   }
   function CustomYamlType(name, kind) {
-    let model = Model(name);
+    const model = Model(name);
     return new yaml.Type('!'+name, {
       kind: kind,
       instanceOf: model,
