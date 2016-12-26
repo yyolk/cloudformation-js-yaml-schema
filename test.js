@@ -3,7 +3,7 @@ var path = require('path');
 var util = require('util');
 var yaml = require('js-yaml');
 var CLOUDFORMATION_SCHEMA = require('./index').CLOUDFORMATION_SCHEMA;
-fs.readFile(path.join(__dirname, 'custom2.yml'), 'utf8', function (error, data) {
+fs.readFile(path.join(__dirname, 'test.yml'), 'utf8', function (error, data) {
   var loaded;
 
   if (!error) {
