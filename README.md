@@ -4,4 +4,4 @@ Schema to ignore CloudFormation YAML local tags while parsing, ie: `!Ref`, `!Bas
 
 For utility in templates and build wrappers
 
-See [tags.json]() for currently supported local tags
+See [tags.json](./tags.json) for currently supported local tags
