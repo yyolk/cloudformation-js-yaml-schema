@@ -1,3 +1,5 @@
+'use strict';
+
 const yaml = require('js-yaml');
 const localTags = require('./tags.json');
 
