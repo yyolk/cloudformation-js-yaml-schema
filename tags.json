@@ -12,7 +12,8 @@
     "Not",
     "Or",
     "Select",
-    "Sub"
+    "Sub",
+    "Split"
   ],
   "scalar": [
     "Ref",
