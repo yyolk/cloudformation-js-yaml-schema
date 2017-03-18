@@ -16,9 +16,9 @@ deploy:
     on:
       tags: true
       repo: yyolk/cloudformation-js-yaml-schema
-  - provider: npm
-    api_key:
-      secure: IhnsUekHJkVe4PxZMtnHJIk22gsbBHjxrnVf60ta27kLU1G5uMWL3q7GFndyVMUEGnUXq26NJB9tMSs6puYz4HitHVgJNNafxIB/kzijEI1o+PVSbV/cWXyyqSiEzfZOTX4xak9QB2C5/W28qBIRW6f9k/3eRB4m6xBMleb824PE2MIdUwA5d0mvVdezDz9L0T2iM1QKsQyPw0cQ9O7qY8R6p79kF6LlXyxueG3Kyhs9rnmUz4nXcAv1sk/atwiAhf0FWCjWMcoB33RwSUlMA4z45HnnfakAG2Nrjy8lNn0zOQipxQ3W7MkWyfRRJqBrOgx9T39XkB408mDpnNhMhHtYlxeUp95LhS+CRLhDoFySZDf971HteAVy7JQbRgSEG59OBisANYkBa3V0lPYqP9v9yvSvCm6QnuS1TPaqBBki6l4/yIwHzSMH3HxJCqyOL5+HHtX/ogqib7Fr4yCd0aFncC6k+CewiBULhkc8rxfs2D4fFKOydVhwe4CM2I4SUTcsFzg1+L/+d5kdozIeWt6FHfdnWeucC50ci3Q9vPUkzP+wKm2IcC1OVvOpVP8ab8rQQnUk1pPpFfcZLVRrypBOkyrVBnka+tt3e1LPyOvbNIMxgt2T3rKKBGiaHFMppqqYhcipl16ApAA/SxsBfckhCG3pbKygL2Pb1FnxHsk=
-    on:
-      tags: true
-      repo: yyolk/cloudformation-js-yaml-schema
+  # - provider: npm
+  #   api_key:
+  #     secure: IhnsUekHJkVe4PxZMtnHJIk22gsbBHjxrnVf60ta27kLU1G5uMWL3q7GFndyVMUEGnUXq26NJB9tMSs6puYz4HitHVgJNNafxIB/kzijEI1o+PVSbV/cWXyyqSiEzfZOTX4xak9QB2C5/W28qBIRW6f9k/3eRB4m6xBMleb824PE2MIdUwA5d0mvVdezDz9L0T2iM1QKsQyPw0cQ9O7qY8R6p79kF6LlXyxueG3Kyhs9rnmUz4nXcAv1sk/atwiAhf0FWCjWMcoB33RwSUlMA4z45HnnfakAG2Nrjy8lNn0zOQipxQ3W7MkWyfRRJqBrOgx9T39XkB408mDpnNhMhHtYlxeUp95LhS+CRLhDoFySZDf971HteAVy7JQbRgSEG59OBisANYkBa3V0lPYqP9v9yvSvCm6QnuS1TPaqBBki6l4/yIwHzSMH3HxJCqyOL5+HHtX/ogqib7Fr4yCd0aFncC6k+CewiBULhkc8rxfs2D4fFKOydVhwe4CM2I4SUTcsFzg1+L/+d5kdozIeWt6FHfdnWeucC50ci3Q9vPUkzP+wKm2IcC1OVvOpVP8ab8rQQnUk1pPpFfcZLVRrypBOkyrVBnka+tt3e1LPyOvbNIMxgt2T3rKKBGiaHFMppqqYhcipl16ApAA/SxsBfckhCG3pbKygL2Pb1FnxHsk=
+  #   on:
+  #     tags: true
+  #     repo: yyolk/cloudformation-js-yaml-schema
