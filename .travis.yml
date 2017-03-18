@@ -1,6 +1,13 @@
+addons:
+  apt:
+    packages:
+      - jq
 language: node_js
 node_js:
-- node
+  - node
+script:
+  - npm run sort-tags.json
+  - npm test
 deploy:
   - provider: releases
     api_key:
