@@ -4,7 +4,8 @@
   "description": "Schema to ignore CloudFormation YAML local tags while parsing or dumping",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "sort-tags.json": "command -v jq >/dev/null 2>&1 &&(jq -S '' tags.json )>tags.sorted.json&&mv tags.sorted.json tags.json || { echo 'jq is not install or not in $PATH' >&2; exit 0; }"
   },
   "repository": {
     "type": "git",
