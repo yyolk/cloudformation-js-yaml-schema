@@ -1,4 +1,4 @@
-# cloudformation-js-yaml-schema
+# cloudformation-js-yaml-schema [![Build Status](https://travis-ci.org/yyolk/cloudformation-js-yaml-schema.svg?branch=master)](https://travis-ci.org/yyolk/cloudformation-js-yaml-schema)
 
 Schema to ignore CloudFormation YAML local tags while parsing, ie: `!Ref`, `!Base64`
 
