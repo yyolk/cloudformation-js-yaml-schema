@@ -2,6 +2,14 @@
   "mapping": [
     "Base64"
   ],
+  "scalar": [
+    "Ref",
+    "Sub",
+    "GetAZs",
+    "GetAtt",
+    "ImportValue",
+    "Condition"
+  ],
   "sequence": [
     "And",
     "Equals",
@@ -14,13 +22,5 @@
     "Select",
     "Sub",
     "Split"
-  ],
-  "scalar": [
-    "Ref",
-    "Sub",
-    "GetAZs",
-    "GetAtt",
-    "ImportValue",
-    "Condition"
   ]
 }
