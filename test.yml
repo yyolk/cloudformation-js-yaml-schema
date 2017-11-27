@@ -21,3 +21,10 @@ Outputs:
   Output2:
     Description: Some unquoted string
     Value: !Sub Instance ID is ${InstanceId}
+
+  Output3:
+    Description:
+      Fn::ImportValue:
+        "Fn::Join": ["", [My-, !FindInMap [Very, !Ref Long, String]]]
+    Value: !ImportValue
+      "Fn::Join": ["", [My-, !FindInMap [Very, !Ref Long, String]]]
