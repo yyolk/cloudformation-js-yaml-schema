@@ -1,13 +1,13 @@
 {
   "mapping": [
-    "Base64"
+    "Base64",
+    "ImportValue"
   ],
   "scalar": [
     "Ref",
     "Sub",
     "GetAZs",
     "GetAtt",
-    "ImportValue",
     "Condition"
   ],
   "sequence": [
