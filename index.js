@@ -2,6 +2,7 @@
 
 const yaml = require('js-yaml');
 const localTags = require('./tags.json');
+const cloudformationTags = build(localTags, yaml);
 
 function build(localTags, yaml) {
   function Model(name) {
@@ -29,12 +30,10 @@ function build(localTags, yaml) {
   return cloudformationTags;
 }
 
-let cloudformationTags = build(localTags, yaml);
 module.exports.localTags = localTags;
 module.exports.build = build;
 module.exports.cloudformationTags = cloudformationTags;
 module.exports.CLOUDFORMATION_SCHEMA = yaml.Schema.create(cloudformationTags);
 module.exports.genSchema = function(yaml) {
-  let tags = build(localTags, yaml);
-  return yaml.Schema.create(tags);
+    return yaml.Schema.create(build(localTags, yaml));
 };
