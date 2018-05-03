@@ -2,6 +2,7 @@ InstanceId:
   Condition: DoLaunchInstance
   Description: Stack Instance ID
   Value: !<!Ref> Box
+  LaunchConfig: !ImportValue "my-import-value"
   UserData: !If
     - DoWriteConnectionString
     - !Base64
