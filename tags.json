@@ -9,7 +9,8 @@
     "GetAZs",
     "GetAtt",
     "Condition",
-    "ImportValue"
+    "ImportValue",
+    "Cidr"
   ],
   "sequence": [
     "And",
@@ -22,6 +23,7 @@
     "Or",
     "Select",
     "Sub",
-    "Split"
+    "Split",
+    "Cidr"
   ]
 }
