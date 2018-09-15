@@ -12,6 +12,7 @@ deploy:
       tags: true
       repo: yyolk/cloudformation-js-yaml-schema
   - provider: npm
+    email: input.output@gmail.com
     api_key:
       secure: UFKzk/VVvHXv4Ekcyu+WMi5mWoZlUWnH+uxSrNabm1joX84mOuqyIER3+fv/70torQWAEJej3svafGrEIhMsRvsicgzKRqknuifDrOUoEPpdhUkMlJ6UOClkIiwWyJRG6ZKfSBMIlT6OL4VoUVHa6GIEOPwOdonEPzscWkVuLPSuWPMomH98zTd/EjPxqNcUeMd9DfCD7K1sNccv+zKqlZcTJlM7O8lYGUi/5JpKENaoHRBPyRHCLy9/7aEt2RK2hSnl2Mw/IrD/1hKfilYG5djtdI1YFy/jIOcqJx8J9G8zKps95FymFXLgW9h/+P+M0xgXA9VBMToO7SGFeRpHii47+zPDP4wk93SNA+BHfJx581cjGOG7FhAcCn33En6T8UF1A0iEU2DmNowEpCiJqKTSbPeULh+dFVmV35lNwFhkeT6Od085eO2XjwogpxxXHdqS79ETXc9klKNYwSID4/lFH1rdpN3tz55LfQbR7n6WR8MRX34DHCOXB5xduShoGjL+DKPxc+mop1XaFU99skYHpQWUpgXva8JA1XjYqBK6tlr8/AddUB3YH1SZDe6X2DEd7WFQKNiER4bJl0OEqw9aoVHsOJFLmmCS/YbvZ4sHx/g2u/ydyD9ZWR66iPDXbGVgUyCvUcP7A+NpxEazcf37FL1wBNSKkD6HYcy2s+Q=
     on:
