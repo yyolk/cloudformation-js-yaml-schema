@@ -24,6 +24,7 @@
     "Select",
     "Sub",
     "Split",
-    "Cidr"
+    "Cidr",
+    "Condition"
   ]
 }
